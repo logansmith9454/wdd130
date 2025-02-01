@@ -1,0 +1,53 @@
+body {
+    background-color: #268bd2;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.title {
+    color: white;
+    text-align: center;
+}
+.title:hover {
+    color: black;
+}
+.quote {
+    color: white;
+    text-align: center;
+    font-size: 10px;
+}
+.citation {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+div.container {
+    text-align: center;
+}
+ol {
+    display: inline-block;
+    color: black;
+    list-style-position: outside;
+    text-align: left;
+    font-size: 13px;
+}
+.portrait {
+    height: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.quote2 {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+.name {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+.president {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
