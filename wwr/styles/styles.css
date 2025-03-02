@@ -129,7 +129,8 @@ footer .social img {
     padding-top: 15px;
 }
 .home-title {
-    color: black;
+    font-size: 25px;
+    color: white;
     font-family: "Roboto", sans-serif, helvetica;
     font-size: 2em;
     margin-top: 10px;
@@ -227,9 +228,6 @@ h4 {
     }
     #hero-msg h1 {
         color: #6f7364;
-    }
-    .home-title {
-        font-size: 25px;
     }
     .rivers-card, .camping-card, .rapids-card { 
         margin: 50px auto;
