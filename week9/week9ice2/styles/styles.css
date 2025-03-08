@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+header {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#blue-bar {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    background-color: #006eb6;
+}
+
+.blue-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.blue-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px;
+}
+
+#white-header {
+    display: flex;
+    flex-direction: row;
+}
+
+#logo-img {
+    width: 75px;
+    padding: 6px;
+}
+
+#header-body {
+
+}
+
+#header-title {
+
+}
+
+.white-nav {
+    
+}
