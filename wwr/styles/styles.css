@@ -205,6 +205,41 @@ h4 {
 }
 
 
+
+.faq-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+#faq-images-container {
+    width: 45%;
+}
+
+.faq-img {
+    width: 100%;
+    padding: 30px 20px;
+}
+
+
+#q-and-a {
+    width: 55%;
+    padding: 0 5%;
+}
+
+#q-and-a h1, h2 {
+    text-align: center;
+    font-family: 'roboto', sans-serif, Helvetica;
+}
+
+#q-and-a p {
+    text-indent: 2em;
+    text-align: left;
+}
+
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
@@ -244,4 +279,17 @@ h4 {
     footer {
         margin-top: 25px;
     }
+
+    #q-and-a h1 {
+        font-size: 90%;
+    }
+
+    #q-and-a h2 {
+        font-size: 70%;
+    }
+
+    #q-and-a p {
+        font-size: 60%;
+    }
+
 }
