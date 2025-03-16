@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+header {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    background-color: #F06543;
+}
+
+.logo {
+    height: 100%;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    font-size: 130%;
+    text-decoration: none;
+    background-color: #313638;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 20%;
+    color: #E0DFD5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
