@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <nav id="myNav" class="container">
+      <div id="title-container">
+        <h2 class="hide-when-narrow">Logoipsum</h2>
+      </div>
+      <button onclick="toggleWidth()" id="collapse-button" type="button">
+        &lt;
+      </button>
+      <h4>MAIN</h4>
+      <div class="svg-button">
+        <img class="svg-img" src="svgs/house-solid.svg" alt="house svg" />
+        <a class="hide-when-narrow" href="#">Dashboard</a>
+      </div>
+      <div class="svg-button">
+        <img class="svg-img" src="svgs/user-solid.svg" alt="user svg" />
+        <a class="hide-when-narrow" href="#">Account</a>
+      </div>
+      <div class="svg-button">
+        <img class="svg-img" src="svgs/file-solid.svg" alt="file svg" />
+        <a class="hide-when-narrow" href="#">Posts</a>
+      </div>
+      <div class="svg-button">
+        <img class="svg-img" src="svgs/calendar-solid.svg" alt="calendar svg" />
+        <a class="hide-when-narrow" href="#">Schedules</a>
+      </div>
+      <h4>SETTINGS</h4>
+      <div class="svg-button">
+        <img class="svg-img" src="svgs/bell-solid.svg" alt="bell svg" />
+        <a class="hide-when-narrow" href="#">Notifications</a>
+      </div>
+      <div class="svg-button">
+        <img class="svg-img" src="svgs/gear-solid.svg" alt="gear svg" />
+        <a class="hide-when-narrow" href="#">Settings</a>
+      </div>
+    </nav>
+    <script>
+      function toggleWidth() {
+        const nav = document.getElementById("myNav");
+        nav.classList.toggle("narrow");
+      }
+      if (nav.classList.contains("narrow")) {
+        button.textContent = ">";
+      } else {
+        button.textContent = "<";
+      }
+    </script>
+  </body>
+</html>

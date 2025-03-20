@@ -1,0 +1,76 @@
+html,
+body {
+  background-color: lightgray;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: sans-serif;
+}
+
+nav {
+  height: 100%;
+  width: 230px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#title-container {
+  height: 75px;
+}
+
+.container {
+  transition: width 0.3s ease;
+}
+
+nav.narrow {
+  width: 100px;
+}
+
+.hide-when-narrow {
+  display: block;
+}
+
+nav.narrow .hide-when-narrow {
+  display: none;
+}
+
+nav h2 {
+  padding: 10px 20px;
+}
+
+.svg-button {
+  margin: 0;
+  padding: 10px;
+}
+
+nav h4 {
+  font-weight: lighter;
+  padding: 5px;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 5px;
+  margin: 0;
+}
+
+#collapse-button {
+  width: 20px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.svg-img {
+  height: 20px;
+}
