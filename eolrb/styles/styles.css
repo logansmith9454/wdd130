@@ -7,10 +7,14 @@ html {
 }
 
 header {
-  height: 20%;
+  height: 120px;
   display: flex;
   flex-direction: row;
   background-color: #f06543;
+}
+
+.logo-link {
+  width: 15%;
 }
 
 .logo {
@@ -18,9 +22,12 @@ header {
 }
 
 .nav-container {
+  width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
 }
 
 .page-title {
@@ -30,7 +37,7 @@ header {
 
 nav {
   height: 40%;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -61,14 +68,23 @@ nav a:hover,
   color: #e0dfd5;
 }
 
+.home-content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 50px;
+}
+
 .text-image-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .home-text {
   padding: 0px 10px;
-  width: 80%;
+  width: 70%;
 }
 
 .demo-image {
