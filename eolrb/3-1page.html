@@ -20,29 +20,169 @@
         </nav>
       </div>
     </header>
-    <main>
-      <div>
-        <div>
-          <p>
-            For each case, every optimal EOLRb solution is listed. Pick one that
-            makes sense to you, preferably building off the EOLR case that you
-            should already know by this point.
-          </p>
-        </div>
-        <div>
-          <img src="images/3-1case1.png" alt="3-1 case 1" />
-          <img src="images/3-1case2.png" alt="3-1 case 2" />
+    <main class="sub-page-grid">
+      <p class="selection-description">
+        For each case, one or more optimal EOLRb solution is listed. Pick one
+        that makes sense to you, preferably building off the EOLR case that you
+        should already know by this point.
+      </p>
+      <img
+        src="images/3-1cases/3-1case1-1.png"
+        id="grid-2-1"
+        class="grid-img"
+        data-desc="M U' M2"
+        alt="3-1 case 1-1"
+      />
+      <img
+        src="images/3-1cases/3-1case1-2.png"
+        id="grid-2-2"
+        class="grid-img"
+        data-desc="M U2 M2"
+        alt="3-1 case 1-2"
+      />
+      <img
+        src="images/3-1cases/3-1case1-3.png"
+        id="grid-2-3"
+        class="grid-img"
+        data-desc="M U M2"
+        alt="3-1 case 1-3"
+      />
+      <img
+        src="images/3-1cases/3-1case1-4.png"
+        id="grid-2-4"
+        class="grid-img"
+        data-desc="M'"
+        alt="3-1 case 1-4"
+      />
+      <img
+        src="images/3-1cases/3-1case2-1.png"
+        id="grid-3-1"
+        class="grid-img"
+        data-desc="M' U M'"
+        alt="3-1 case 2-1"
+      />
+      <img
+        src="images/3-1cases/3-1case2-2.png"
+        id="grid-3-2"
+        class="grid-img"
+        data-desc="M' U M U' M2"
+        alt="3-1 case 2-2"
+      />
+      <img
+        src="images/3-1cases/3-1case2-3.png"
+        id="grid-3-3"
+        class="grid-img"
+        data-desc="M' U M U2 M2"
+        alt="3-1 case 2-3"
+      />
+      <img
+        src="images/3-1cases/3-1case2-4.png"
+        id="grid-3-4"
+        class="grid-img"
+        data-desc="M' U M U M2"
+        alt="3-1 case 2-4"
+      />
+      <img
+        src="images/3-1cases/3-1case3-1.png"
+        id="grid-4-1"
+        class="grid-img"
+        data-desc="M' U' M' U2 M2"
+        alt="3-1 case 3-1"
+      />
+      <img
+        src="images/3-1cases/3-1case3-2.png"
+        id="grid-4-2"
+        class="grid-img"
+        data-desc="M' U' M' U M2"
+        alt="3-1 case 3-2"
+      />
+      <img
+        src="images/3-1cases/3-1case3-3.png"
+        id="grid-4-3"
+        class="grid-img"
+        data-desc="M' U' M"
+        alt="3-1 case 3-3"
+      />
+      <img
+        src="images/3-1cases/3-1case3-4.png"
+        id="grid-4-4"
+        class="grid-img"
+        data-desc="M' U' M' U' M2"
+        alt="3-1 case 3-4"
+      />
+      <img
+        src="images/3-1cases/3-1case4-1.png"
+        id="grid-5-1"
+        class="grid-img"
+        data-desc="(U) M' U2 M' U' M2 U' M'||(U) M' U2 M' U M2 U' M||(U) M' U2 M U M U' M2||(U) M U2 M U' M' U' M2"
+        alt="3-1 case 4-1"
+      />
+      <img
+        src="images/3-1cases/3-1case4-2.png"
+        id="grid-5-2"
+        class="grid-img"
+        data-desc="M' U' M' U' M U2 M'||(U) M' U2 M U' M2 U2 M'||(U) M U2 M U' M' U2 M2||M' U M U' M' U2 M||(U) M U2 M U M2 U2 M||(U) M' U2 M U M U2 M2"
+        alt="3-1 case 4-2"
+      />
+      <img
+        src="images/3-1cases/3-1case4-3.png"
+        id="grid-5-3"
+        class="grid-img"
+        data-desc="(U) M U2 M U' M' U M2||(U) M U2 M' U' M2 U M'||(U) M' U2 M U M U M2||(U) M U2 M' U M2 U M"
+        alt="3-1 case 4-3"
+      />
+      <img
+        src="images/3-1cases/3-1case4-4.png"
+        id="grid-5-4"
+        class="grid-img"
+        data-desc="(U) M' U2 M U M'||(U) M U2 M U' M"
+        alt="3-1 case 4-4"
+      />
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <img id="modal-image" src="" alt="Large Image" />
+          <div id="modal-text"></div>
+          <span class="close-btn" onclick="closeModal()">Close</span>
         </div>
       </div>
-      <div>
-        <div>3-1 UL DB</div>
-        <div>
-          <img src="images/3-1case1.png" alt="Enlarged picture of EOLRb case" />
-        </div>
-        <div>
-          <h4>M' U' M' U</h4>
-        </div>
-      </div>
+      <script>
+        const images = document.querySelectorAll(".grid-img");
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        const modalText = document.getElementById("modal-text");
+
+        images.forEach((img) => {
+          img.addEventListener("click", function () {
+            modalImage.src = this.src;
+
+            // Get description and prepend "Solutions"
+            const desc = this.dataset.desc || "";
+            const paragraphs = desc.split("||");
+            let textWithBreaks = "Solution(s):"; // Start with "Solutions"
+
+            // Add each paragraph with <br> for line breaks
+            paragraphs.forEach((text, index) => {
+              if (text.trim()) {
+                textWithBreaks += (index === 0 ? "<br>" : "<br>") + text.trim();
+              }
+            });
+
+            // Set as HTML for <br> to work
+            modalText.innerHTML = textWithBreaks;
+
+            modal.classList.add("active");
+          });
+        });
+
+        function closeModal() {
+          modal.classList.remove("active");
+        }
+
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) closeModal();
+        });
+      </script>
     </main>
     <footer>
       <h2>Logan Smith</h2>
