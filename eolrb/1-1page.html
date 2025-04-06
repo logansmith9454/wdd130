@@ -1,111 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EOLRb</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <header>
-      <a class="logo-link" href="index.html">
-        <img src="images/logo.png" alt="EOLRb logo" class="logo" />
-      </a>
-      <div class="nav-container">
-        <h1 id="page-title">EOLRb Cases:</h1>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="3-1page.html">3/1</a>
-          <a href="4-0page.html">4/0</a>
-          <a class="current-tab" href="1-1page.html">1/1</a>
-          <a href="4-2page.html">6-flip</a>
-        </nav>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EOLRb</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <header>
+    <a class="logo-link" href="index.html">
+      <img src="images/logo.png" alt="EOLRb logo" class="logo">
+    </a>
+    <div class="nav-container">
+      <h1 id="page-title">EOLRb Cases:</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="3-1page.html">3/1</a>
+        <a href="4-0page.html">4/0</a>
+        <a class="current-tab" href="1-1page.html">1/1</a>
+        <a href="4-2page.html">6-flip</a>
+      </nav>
+    </div>
+  </header>
+  <main class="sub-page-grid">
+    <p class="selection-description">
+      For each case, one or more optimal EOLRb solution is listed. Pick one
+      that makes sense to you, preferably building off the EOLR case that you
+      should already know by this point.
+    </p>
+
+    <img src="images/1-1cases/1-1case1-1.png" id="grid-2-1" class="grid-img"
+      data-desc="(U') M U M' U2 M' U' M||(U) M U' M' U2 M' U M||(U) M U' M U2 M' U' M'||(U') M U M U2 M' U M'"
+      alt="1-1 case 1-1">
+    <img src="images/1-1cases/1-1case1-2.png" id="grid-2-2" class="grid-img"
+      data-desc="(U) M U' M' U2 M U' M2 U' M||(U') M' U2 M' U M' U' M' U' M||(U) M' U M U M U' M' U2 M||(U) M U' M' U2 M' U M' U' M2||(U) M' U' M2 U M' U2 M' U M'||(U) M' U' M2 U M U2 M' U' M||(U') M U M U2 M U' M2 U' M'||(U') M2 U' M U' M' U2 M U' M"
+      alt="1-1 case 1-2">
+    <img src="images/1-1cases/1-1case1-3.png" id="grid-2-3" class="grid-img"
+      data-desc="(U) M2 U2 M U' M' U2 M U' M||(U) M U' M' U2 M' U' M2 U2 M||(U) M' U2 M2 U' M' U2 M U M||(U) M2 U2 M U' M U2 M U M'||(U') M U M' U2 M' U' M' U2 M2||(U') M U M U2 M' U' M2 U2 M'||(U) M' U2 M2 U' M U2 M U' M'||(U) M U' M U2 M' U' M U2 M2"
+      alt="1-1 case 1-3">
+    <img src="images/1-1cases/1-1case1-4.png" id="grid-2-4" class="grid-img"
+      data-desc="(U') M' U M2 U' M U2 M' U M||(U) M U2 M' U M U' M U' M'||(U') M U M' U2 M' U' M' U M2||(U) M U' M U2 M' U' M U M2||(U) M' U M U' M' U' M' U2 M'||(U) M U' M' U2 M' U M' U M2||(U) M2 U M U M' U2 M U M||(U) M2 U M U M U2 M U' M'"
+      alt="1-1 case 1-4">
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <img id="modal-image" src="" alt="Large Image">
+        <div id="modal-text"></div>
+        <span class="close-btn" onclick="closeModal()">Close</span>
       </div>
-    </header>
-    <main class="sub-page-grid">
-      <p class="selection-description">
-        For each case, one or more optimal EOLRb solution is listed. Pick one
-        that makes sense to you, preferably building off the EOLR case that you
-        should already know by this point.
-      </p>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".grid-img");
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modal-image");
+      const modalText = document.getElementById("modal-text");
 
-      <img
-        src="images/1-1cases/1-1case1-1.png"
-        id="grid-2-1"
-        class="grid-img"
-        data-desc="(U') M U M' U2 M' U' M||(U) M U' M' U2 M' U M||(U) M U' M U2 M' U' M'||(U') M U M U2 M' U M'"
-        alt="1-1 case 1-1"
-      />
-      <img
-        src="images/1-1cases/1-1case1-2.png"
-        id="grid-2-2"
-        class="grid-img"
-        data-desc="(U) M U' M' U2 M U' M2 U' M||(U') M' U2 M' U M' U' M' U' M||(U) M' U M U M U' M' U2 M||(U) M U' M' U2 M' U M' U' M2||(U) M' U' M2 U M' U2 M' U M'||(U) M' U' M2 U M U2 M' U' M||(U') M U M U2 M U' M2 U' M'||(U') M2 U' M U' M' U2 M U' M"
-        alt="1-1 case 1-2"
-      />
-      <img
-        src="images/1-1cases/1-1case1-3.png"
-        id="grid-2-3"
-        class="grid-img"
-        data-desc="(U) M2 U2 M U' M' U2 M U' M||(U) M U' M' U2 M' U' M2 U2 M||(U) M' U2 M2 U' M' U2 M U M||(U) M2 U2 M U' M U2 M U M'||(U') M U M' U2 M' U' M' U2 M2||(U') M U M U2 M' U' M2 U2 M'||(U) M' U2 M2 U' M U2 M U' M'||(U) M U' M U2 M' U' M U2 M2"
-        alt="1-1 case 1-3"
-      />
-      <img
-        src="images/1-1cases/1-1case1-4.png"
-        id="grid-2-4"
-        class="grid-img"
-        data-desc="(U') M' U M2 U' M U2 M' U M||(U) M U2 M' U M U' M U' M'||(U') M U M' U2 M' U' M' U M2||(U) M U' M U2 M' U' M U M2||(U) M' U M U' M' U' M' U2 M'||(U) M U' M' U2 M' U M' U M2||(U) M2 U M U M' U2 M U M||(U) M2 U M U M U2 M U' M'"
-        alt="1-1 case 1-4"
-      />
+      images.forEach((img) => {
+        img.addEventListener("click", function () {
+          modalImage.src = this.src;
 
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <img id="modal-image" src="" alt="Large Image" />
-          <div id="modal-text"></div>
-          <span class="close-btn" onclick="closeModal()">Close</span>
-        </div>
-      </div>
-      <script>
-        const images = document.querySelectorAll(".grid-img");
-        const modal = document.getElementById("modal");
-        const modalImage = document.getElementById("modal-image");
-        const modalText = document.getElementById("modal-text");
+          // Get description and prepend "Solutions"
+          const desc = this.dataset.desc || "";
+          const paragraphs = desc.split("||");
+          let textWithBreaks = "Solution(s):"; // Start with "Solutions"
 
-        images.forEach((img) => {
-          img.addEventListener("click", function () {
-            modalImage.src = this.src;
-
-            // Get description and prepend "Solutions"
-            const desc = this.dataset.desc || "";
-            const paragraphs = desc.split("||");
-            let textWithBreaks = "Solution(s):"; // Start with "Solutions"
-
-            // Add each paragraph with <br> for line breaks
-            paragraphs.forEach((text, index) => {
-              if (text.trim()) {
-                textWithBreaks += (index === 0 ? "<br>" : "<br>") + text.trim();
-              }
-            });
-
-            // Set as HTML for <br> to work
-            modalText.innerHTML = textWithBreaks;
-
-            modal.classList.add("active");
+          // Add each paragraph with <br> for line breaks
+          paragraphs.forEach((text, index) => {
+            if (text.trim()) {
+              textWithBreaks += (index === 0 ? "<br>" : "<br>") + text.trim();
+            }
           });
-        });
 
-        function closeModal() {
-          modal.classList.remove("active");
-        }
+          // Set as HTML for <br> to work
+          modalText.innerHTML = textWithBreaks;
 
-        modal.addEventListener("click", function (e) {
-          if (e.target === modal) closeModal();
+          modal.classList.add("active");
         });
-      </script>
-    </main>
-    <footer>
-      <h2>Logan Smith</h2>
-      <a href="site-plan-eolrb.html">EOLRb site plan</a>
-    </footer>
-  </body>
+      });
+
+      function closeModal() {
+        modal.classList.remove("active");
+      }
+
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) closeModal();
+      });
+    </script>
+  </main>
+  <footer>
+    <h2>Logan Smith</h2>
+    <a href="site-plan-eolrb.html">EOLRb site plan</a>
+  </footer>
+</body>
+
 </html>
